@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no Internet</title>
+    <style>
+      
+        .container{
+             margin: auto;
+             margin-left:20%;
+          
+        }
+        .heading{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <h1 class="heading">This is a Demo website</h1>
+    <div class="container" id="content">
+       
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       <br>Harum dolorem aut sapiente nisi obcaecati magnam laboriosam quod, quo<br> voluptatem perferendis iusto nostrum, aliquam, in vero hic ex. Cupiditate, dolores sed.
+    </div>
+</body>
+<script>
+    window.addEventListener('online',function(){
+        location.reload();
+    });
+    window.addEventListener('offline',function(){
+    document.getElementsByClassName("heading")[0].innerHTML='';
+    document.getElementById('content').innerHTML=` <img src="./nointernet.gif" alt="">`;
+    });
+</script>
+</html>
